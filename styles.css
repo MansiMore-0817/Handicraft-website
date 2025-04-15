@@ -359,3 +359,24 @@ nav ul li a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/*Media queries for responsiveness  */
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
