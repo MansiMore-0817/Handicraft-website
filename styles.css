@@ -366,7 +366,7 @@ html {
 /*Media queries for responsiveness  */
 /* Mobile devices */
 @media screen and (max-width: 768px) {
-    .container {
+    .body {
         width: 100%;
         padding: 10px;
     }
@@ -374,7 +374,7 @@ html {
 
 /* Tablets */
 @media screen and (max-width: 1024px) {
-    .container {
+    .body {
         width: 80%;
     }
 }
