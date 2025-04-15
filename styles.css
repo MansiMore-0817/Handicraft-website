@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;    /* Optional padding to avoid touching screen edges */
     background: #f8f8f8;
-    width: 100%;
+/*     width: 100%; */
 /*     max-width: 1200px;  /* Maximum width on large screens */ */
     
 }
