@@ -2,8 +2,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0;    /* Optional padding to avoid touching screen edges */
     background: #f8f8f8;
+/*     width: 100%; */
+/*     max-width: 1200px;  /* Maximum width on large screens */ */
+    
 }
 
 h1, h2, h3 {
@@ -359,3 +362,24 @@ nav ul li a:hover {
 html {
     scroll-behavior: smooth;
 }
+
+/*Media queries for responsiveness  */
+/* Mobile devices */
+/* @media screen and (max-width: 768px) {
+    .body {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Tablets */
+/* @media screen and (max-width: 1024px) {
+    .body {
+        width: 80%;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}  */
