@@ -18,8 +18,6 @@ A modern, elegant, and responsive handcrafted products website showcasing tradit
 
 ## 🖼️ Preview (Screenshots)
 
-## 🖼️ Screenshots
-
 ### **Hero & Featured Products**
 <table>
   <tr>
@@ -40,7 +38,6 @@ A modern, elegant, and responsive handcrafted products website showcasing tradit
 <table>
   <tr>
     <td><img src="./screenshots/contact_footer.jpg" width="100%"></td>
-    <td><img src="./screenshots/project_structure.png" width="100%"></td>
   </tr>
 </table>
 
@@ -60,13 +57,8 @@ A modern, elegant, and responsive handcrafted products website showcasing tradit
 
 ## 📁 Project Structure
 
-Handicraft-website/
-│── index.html
-│── styles.css
-│── script.js
-│── images/
-│── demo/
-└── README.md
+<td><img src="./screenshots/project_structure.png" width="100%"></td>
+
 
 
 ---
@@ -84,6 +76,7 @@ Handicraft-website/
 git clone https://github.com/MansiMore-0817/Handicraft-website
 
 cd Handicraft-website
+
 Right-click index.html → Open with Live Server
 
 
@@ -99,4 +92,3 @@ Feel free to open an issue for feature suggestions or improvements.
 This project is open-source under the **MIT License**.
 
 
-## 📁 Project Structure
