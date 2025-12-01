@@ -20,11 +20,6 @@ A modern, elegant, and responsive handcrafted products website showcasing tradit
 
 ---
 
-## 🚀 Live Demo
-👉 *Deployed link here*  
-`https://your-demo-link.com`
-
----
 
 ## 🖼️ Preview (Screenshots)
 
