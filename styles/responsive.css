@@ -18,21 +18,21 @@
     
     /* Navbar responsive adjustments for ultra-wide screens */
     .header-container {
-        padding: var(--spacing-lg) var(--spacing-xxl);
-        gap: var(--spacing-xxl);
+        padding: 1rem 2rem;
+        max-width: 1600px;
     }
     
-    .logo {
-        margin-right: var(--spacing-xxl);
+    .nav-desktop {
+        margin: 0 1.5rem;
     }
     
     .nav-desktop ul {
-        gap: var(--spacing-xxl);
+        gap: 2rem;
     }
     
     .header-actions {
-        gap: var(--spacing-md);
-        margin-left: var(--spacing-xxl);
+        gap: 1rem;
+        margin-left: 1.5rem;
     }
     
     .section-header {
@@ -59,7 +59,7 @@
 }
 
 /* ===== LARGE DESKTOP (1024px to 1439px) ===== */
-@media (max-width: 1439px) and (min-width: 1024px) {
+@media (max-width: 1439px) and (min-width: 1025px) {
     .container {
         max-width: 1200px;
         padding: 0 var(--spacing-lg);
@@ -67,21 +67,21 @@
     
     /* Navbar responsive adjustments for large desktop */
     .header-container {
-        padding: var(--spacing-md) var(--spacing-xl);
-        gap: var(--spacing-xl);
+        padding: 1rem 1.5rem;
+        max-width: 1400px;
     }
     
-    .logo {
-        margin-right: var(--spacing-xl);
+    .nav-desktop {
+        margin: 0 1rem;
     }
     
     .nav-desktop ul {
-        gap: var(--spacing-xl);
+        gap: 1.5rem;
     }
     
     .header-actions {
-        gap: var(--spacing-md);
-        margin-left: var(--spacing-xl);
+        gap: 0.75rem;
+        margin-left: 1rem;
     }
     
     .four-column-grid {
