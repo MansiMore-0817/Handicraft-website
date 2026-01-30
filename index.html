@@ -2,93 +2,354 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>ArtisanCraft India</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisanCraft India - Premium Handcrafted Treasures</title>
+    <meta name="description" content="Discover India's finest handcrafted treasures. Premium quality handicrafts made by skilled artisans with authentic cultural heritage.">
+    <meta name="keywords" content="handicrafts, indian crafts, handmade, artisan, pottery, textiles, jewelry, traditional art, cultural heritage">
+    <meta name="author" content="ArtisanCraft India">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ArtisanCraft India - Premium Handcrafted Treasures">
+    <meta property="og:description" content="Discover India's finest handcrafted treasures. Premium quality handicrafts made by skilled artisans with authentic cultural heritage.">
+    <meta property="og:image" content="images/handicrafts.jpg">
+    <meta property="og:url" content="https://artisancraft-india.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtisanCraft India - Premium Handcrafted Treasures">
+    <meta name="twitter:description" content="Discover India's finest handcrafted treasures. Premium quality handicrafts made by skilled artisans.">
+    <meta name="twitter:image" content="images/handicrafts.jpg">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 </head>
 <body>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Premium Crafts...</p>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header>
-        <div class="logo">ArtisanCraft <span>India</span></div>
-        <nav>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                ArtisanCraft <span class="logo-accent">India</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                    <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#artisans">Artisans</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-        <div class="icons">
-            <span>&#128269;</span>
-            <span>&#128722;</span>
-        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Discover India's Finest Handicrafts</h1>
-            <p style="color: whitesmoke;">Experience the rich cultural heritage through authentic handcrafted treasures made by skilled artisans.</p>
-            <button class="btn">Shop Now</button>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="hero-title-main">Discover India's</span>
+                        <span class="hero-title-accent">Finest Handicrafts</span>
+                    </h1>
+                    <p class="hero-description">Experience the rich cultural heritage through authentic handcrafted treasures made by skilled artisans across India.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary">
+                            <span>Shop Collection</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <span>Meet Artisans</span>
+                            <i class="fas fa-users"></i>
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Artisans</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">States</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/handicrafts.jpg" alt="Premium Indian Handicrafts" class="hero-img">
+                    <div class="hero-image-overlay">
+                        <div class="floating-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>100% Authentic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-            <img src="handicrafts.jpg" alt="Handicrafts">
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- Categories Section -->
     <section class="categories">
-        <h2>Shop by Category</h2>
-        <div class="category-container">
-            <div class="category-box">
-                <span>&#x1F3A8;</span>
-                <h3>Paintings</h3>
-                <p>Traditional art forms</p>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Explore our curated collection of authentic Indian handicrafts</p>
             </div>
-            <div class="category-box">
-                <span>&#x1F9F5;</span>
-                <h3>Textiles</h3>
-                <p>Handwoven fabrics</p>
-            </div>
-            <div class="category-box">
-                <span>&#x1F48E;</span>
-                <h3>Jewelry</h3>
-                <p>Traditional ornaments</p>
-            </div>
-            <div class="category-box">
-                <span>&#x1F3FA;</span>
-                <h3>Pottery</h3>
-                <p>Ceramic arts</p>
+            <div class="category-grid">
+                <div class="category-card" data-category="paintings">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Paintings</h3>
+                    <p>Traditional art forms</p>
+                    <div class="category-overlay">
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+                <div class="category-card" data-category="textiles">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Textiles</h3>
+                    <p>Handwoven fabrics</p>
+                    <div class="category-overlay">
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+                <div class="category-card" data-category="jewelry">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Jewelry</h3>
+                    <p>Traditional ornaments</p>
+                    <div class="category-overlay">
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+                <div class="category-card" data-category="pottery">
+                    <div class="category-icon">
+                        <i class="fas fa-vase"></i>
+                    </div>
+                    <h3>Pottery</h3>
+                    <p>Ceramic arts</p>
+                    <div class="category-overlay">
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Products -->
     <section class="featured" id="shop">
-        <h2 style="color: whitesmoke;">Featured Products</h2>
-        <div class="product-container">
-            <div class="product-card">
-                <img src="blue-vase.jpg" alt="Blue Pottery Vase">
-                <h3>Blue Pottery Vase</h3>
-                <p>Handcrafted in Jaipur</p>
-                <span class="price">$89.99</span>
-                <button class="btn">Add to Cart</button>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Handpicked treasures from our master artisans</p>
             </div>
-            <div class="product-card">
-                <img src="banarasi-saree.jpg" alt="Banarasi Silk Saree">
-                <h3>Banarasi Silk Saree</h3>
-                <p>Woven in Varanasi</p>
-                <span class="price">$299.99</span>
-                <button class="btn">Add to Cart</button>
+            
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pottery">Pottery</button>
+                    <button class="filter-btn" data-filter="textiles">Textiles</button>
+                    <button class="filter-btn" data-filter="decor">Decor</button>
+                </div>
+                <div class="sort-group">
+                    <select class="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
             </div>
-            <div class="product-card">
-                <img src="brass-decor.jpg" alt="Brass Decor Piece">
-                <h3>Brass Decor Piece</h3>
-                <p>Crafted in Moradabad</p>
-                <span class="price">$149.99</span>
-                <button class="btn">Add to Cart</button>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <div class="product-card" data-category="pottery">
+                    <div class="product-image">
+                        <img src="images/blue-vase.jpg" alt="Blue Pottery Vase" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-product="blue-vase">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge badge-featured">Featured</span>
+                            <span class="badge badge-handmade">Handmade</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Blue Pottery Vase</h3>
+                        <p class="product-origin">Handcrafted in Jaipur</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(24)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$120.00</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="textiles">
+                    <div class="product-image">
+                        <img src="images/banarasi-saree.jpg" alt="Banarasi Silk Saree" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-product="banarasi-saree">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge badge-premium">Premium</span>
+                            <span class="badge badge-authentic">Authentic</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Banarasi Silk Saree</h3>
+                        <p class="product-origin">Woven in Varanasi</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(18)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$299.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="decor">
+                    <div class="product-image">
+                        <img src="images/brass-decor.jpg" alt="Brass Decor Piece" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" data-product="brass-decor">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-badges">
+                            <span class="badge badge-bestseller">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Brass Decor Piece</h3>
+                        <p class="product-origin">Crafted in Moradabad</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(31)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$149.99</span>
+                            <span class="original-price">$180.00</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="btn btn-outline load-more-btn">
+                    <span>Load More Products</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -96,91 +357,289 @@
 
 <!-- Meet Our Artisans Section -->
 <section class="artisans" id="artisans">
-    <div class="artisan-image">
-        <img src="artisans.jpg" alt="Artisans at work">
-    </div>
-    <div class="artisan-content">
-        <h2>Meet Our Artisans</h2>
-        <p>Each product tells a story of tradition, skill, and dedication passed down through generations. By supporting our artisans, you're helping preserve India's rich cultural heritage.</p>
-        <button class="btn">Read Stories</button>
+    <div class="container">
+        <div class="artisans-content">
+            <div class="artisan-image">
+                <img src="images/artisans.jpg" alt="Skilled artisans at work" loading="lazy">
+                <div class="image-overlay">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="artisan-info">
+                <div class="section-header">
+                    <h2 class="section-title">Meet Our Artisans</h2>
+                    <p class="section-subtitle">Each product tells a story of tradition, skill, and dedication passed down through generations. By supporting our artisans, you're helping preserve India's rich cultural heritage.</p>
+                </div>
+                
+                <div class="artisan-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Master Craftsmen</h4>
+                            <p>Generations of expertise in traditional techniques</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Fair Trade</h4>
+                            <p>Direct support to artisan communities</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Sustainable</h4>
+                            <p>Eco-friendly materials and processes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artisan-actions">
+                    <button class="btn btn-primary">
+                        <span>Read Their Stories</span>
+                        <i class="fas fa-book-open"></i>
+                    </button>
+                    <button class="btn btn-outline">
+                        <span>Watch Documentary</span>
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Why Choose Us Section -->
 <section class="why-choose-us">
-    <h2>Why Choose Us</h2>
-    <div class="choose-container">
-        <div class="choose-box">
-            <span>&#x1F3A8;</span>
-            <h3>Authentic Products</h3>
-            <p>100% genuine handicrafts</p>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose ArtisanCraft India</h2>
+            <p class="section-subtitle">Experience the difference of authentic craftsmanship</p>
         </div>
-        
-        <div class="choose-box">
-            <span>&#128666;</span>
-            <h3>Worldwide Shipping</h3>
-            <p>Fast & secure delivery</p>
-        </div>
-        <div class="choose-box">
-            <span>&#x1F3E2;</span>
-            <h3>Artisan Support</h3>
-            <p>Direct artisan benefits</p>
-        </div>
-        <div class="choose-box">
-            <span>&#x1F4DE;</span>
-            <h3>24/7 Support</h3>
-            <p>Always here to help</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Authentic Products</h3>
+                <p>100% genuine handicrafts with authenticity certificates</p>
+                <div class="feature-hover">
+                    <span>Learn More</span>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Worldwide Shipping</h3>
+                <p>Fast & secure delivery to your doorstep globally</p>
+                <div class="feature-hover">
+                    <span>Learn More</span>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Artisan Support</h3>
+                <p>Direct benefits to artisan communities and families</p>
+                <div class="feature-hover">
+                    <span>Learn More</span>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Always here to help with your queries and concerns</p>
+                <div class="feature-hover">
+                    <span>Learn More</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Stay Updated Section -->
-<section class="newsletter">
-    <h2>Stay Updated</h2>
-    <p>Subscribe to our newsletter for new products, artisan stories, and special offers</p>
-    <div class="subscribe-box">
-        <input type="email" placeholder="Enter your email">
-        <button class="btn subscribe-btn" style="background-color: rgb(176, 84, 9);">Subscribe</button>
+<!-- Newsletter Section -->
+<section class="newsletter" id="contact">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-info">
+                <h2 class="section-title">Stay Connected</h2>
+                <p class="section-subtitle">Subscribe to our newsletter for new products, artisan stories, and exclusive offers</p>
+                <div class="newsletter-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-gift"></i>
+                        <span>Exclusive Offers</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Artisan Stories</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-star"></i>
+                        <span>New Collections</span>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter-form">
+                <form class="subscribe-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </form>
+                <div class="success-message" id="newsletter-success">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Thank you for subscribing!</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Footer Section -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-column">
-            <h3>ArtisanCraft India</h3>
-            <p>Bringing India's finest handicrafts to the world</p>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🎨</span>
+                    <span class="logo-text">ArtisanCraft India</span>
+                </div>
+                <p class="footer-description">Bringing India's finest handicrafts to the world. Supporting artisan communities while preserving cultural heritage.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#artisans">Artisans</a></li>
+                    <li><a href="artisan-stories.html">Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@artisancraft.in</span>
+                    </div>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>Authentic Products</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Artisans</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Customer Service</h3>
-            <ul>
-                <li><a href="#">Shipping Policy</a></li>
-                <li><a href="#">Returns</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Track Order</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Connect With Us</h3>
-            <div class="social-icons">
-                <span>&#x1F426;</span> <!-- Twitter -->
-                <span>&#x1F4F7;</span> <!-- Instagram -->
-                <span>&#x1F4F1;</span> <!-- Facebook -->
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 ArtisanCraft India. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </div>
-    <p class="footer-bottom">&copy; 2025 ArtisanCraft India. All rights reserved.</p>
 </footer>
 
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
 
+<!-- Quick View Modal -->
+<div class="modal" id="quickViewModal">
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Close modal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+            <div class="product-images">
+                <img id="modalProductImage" src="" alt="">
+            </div>
+            <div class="product-details">
+                <h3 id="modalProductTitle"></h3>
+                <p id="modalProductOrigin"></p>
+                <div class="product-rating">
+                    <div class="stars" id="modalProductRating"></div>
+                </div>
+                <div class="product-price">
+                    <span class="current-price" id="modalProductPrice"></span>
+                </div>
+                <p id="modalProductDescription"></p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Add to Cart</span>
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-heart"></i>
+                        <span>Add to Wishlist</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

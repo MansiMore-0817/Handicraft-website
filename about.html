@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ArtisanCraft India | Our Mission & Vision</title>
+    <meta name="description" content="Learn about ArtisanCraft India's mission to preserve traditional handicrafts, empower artisans, and create sustainable livelihoods.">
+    <meta name="keywords" content="about artisancraft, mission, vision, handicraft preservation, artisan empowerment, cultural heritage">
+    <meta name="author" content="ArtisanCraft India">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Premium Crafts...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                ArtisanCraft <span class="logo-accent">India</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                    <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">About ArtisanCraft India</h1>
+                <p class="page-subtitle">Preserving India's rich cultural heritage while empowering artisan communities</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">About</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Story Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <div class="hero-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="hero-description">
+                        ArtisanCraft India was born from a simple yet powerful belief: that traditional handicrafts are not just products, but living expressions of our cultural soul. Every piece tells a story of generations of skill, passion, and heritage that deserves to be celebrated and preserved.
+                    </p>
+                    <p class="hero-description">
+                        We bridge the gap between India's master artisans and the global community, ensuring that these timeless crafts continue to thrive in the modern world while providing sustainable livelihoods to the skilled hands that create them.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/artisans.jpg" alt="Traditional artisans at work" loading="lazy">
+                    <div class="hero-overlay">
+                        <div class="heritage-badge">
+                            <i class="fas fa-heart"></i>
+                            <span>Preserving Heritage Since 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <!-- Mission -->
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To preserve and promote India's traditional handicrafts by creating sustainable market opportunities for artisans, ensuring fair compensation, and connecting authentic handmade products with conscious consumers worldwide.</p>
+                    <ul class="mission-points">
+                        <li>Empower artisan communities through fair trade practices</li>
+                        <li>Preserve traditional crafting techniques for future generations</li>
+                        <li>Create sustainable livelihoods in rural and semi-urban areas</li>
+                        <li>Promote authentic Indian handicrafts globally</li>
+                    </ul>
+                </div>
+
+                <!-- Vision -->
+                <div class="vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted platform for authentic Indian handicrafts, where every purchase supports an artisan family and contributes to preserving India's rich cultural heritage for generations to come.</p>
+                    <ul class="vision-points">
+                        <li>A thriving ecosystem of empowered artisan communities</li>
+                        <li>Global recognition for Indian traditional crafts</li>
+                        <li>Sustainable employment in rural India</li>
+                        <li>Cultural heritage preserved through commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="impact-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Creating meaningful change in artisan communities across India</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Active Artisans</div>
+                    <p class="stat-description">Skilled craftspeople earning sustainable income</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Villages Supported</div>
+                    <p class="stat-description">Rural communities with improved livelihoods</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Traditional Crafts</div>
+                    <p class="stat-description">Ancient techniques preserved and promoted</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="stat-number" data-target="2000">0</div>
+                    <div class="stat-label">Families Impacted</div>
+                    <p class="stat-description">Lives improved through fair trade practices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Authenticity</h3>
+                    <p>Every product is genuinely handcrafted using traditional techniques passed down through generations. We guarantee the authenticity of every piece.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Fair Trade</h3>
+                    <p>We ensure artisans receive fair compensation for their work, promoting sustainable livelihoods and economic empowerment in rural communities.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Our practices support environmental sustainability through eco-friendly materials, traditional techniques, and minimal industrial processing.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cultural Preservation</h3>
+                    <p>We actively work to preserve India's rich cultural heritage by supporting traditional crafts and passing skills to new generations.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Quality Excellence</h3>
+                    <p>We maintain the highest standards of quality, ensuring every product meets our rigorous criteria for craftsmanship and durability.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Reach</h3>
+                    <p>We connect local artisans with global markets, sharing India's cultural treasures with conscious consumers worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employment Generation -->
+    <section class="employment-section">
+        <div class="container">
+            <div class="employment-content">
+                <div class="employment-text">
+                    <h2 class="section-title">Creating Rural Employment</h2>
+                    <p class="section-subtitle">Transforming traditional skills into sustainable livelihoods</p>
+                    
+                    <div class="employment-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Work from Home</h4>
+                                <p>Artisans can work from their homes, maintaining family bonds while earning a steady income.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Flexible Hours</h4>
+                                <p>Our model allows artisans to work at their own pace, balancing craft with other responsibilities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Skill Development</h4>
+                                <p>Continuous training programs help artisans refine their skills and learn new techniques.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Income Growth</h4>
+                                <p>As skills improve and demand grows, artisans see steady increases in their earnings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="employment-image">
+                    <img src="images/handicrafts.jpg" alt="Artisans working from home" loading="lazy">
+                    <div class="employment-stats">
+                        <div class="stat">
+                            <span class="number">300%</span>
+                            <span class="label">Average Income Increase</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">85%</span>
+                            <span class="label">Women Artisans</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Preservation -->
+    <section class="cultural-preservation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preserving Cultural Identity</h2>
+                <p class="section-subtitle">Keeping ancient traditions alive for future generations</p>
+            </div>
+            
+            <div class="preservation-grid">
+                <div class="preservation-item">
+                    <div class="preservation-image">
+                        <img src="images/blue-vase.jpg" alt="Traditional pottery techniques" loading="lazy">
+                    </div>
+                    <div class="preservation-content">
+                        <h3>Traditional Techniques</h3>
+                        <p>We document and preserve ancient crafting methods, ensuring they're passed down to new generations of artisans.</p>
+                    </div>
+                </div>
+                
+                <div class="preservation-item">
+                    <div class="preservation-image">
+                        <img src="images/banarasi-saree.jpg" alt="Master artisan teaching" loading="lazy">
+                    </div>
+                    <div class="preservation-content">
+                        <h3>Knowledge Transfer</h3>
+                        <p>Master artisans mentor young learners, creating a continuous chain of knowledge and skill transfer.</p>
+                    </div>
+                </div>
+                
+                <div class="preservation-item">
+                    <div class="preservation-image">
+                        <img src="images/brass-decor.jpg" alt="Cultural motifs and designs" loading="lazy">
+                    </div>
+                    <div class="preservation-content">
+                        <h3>Cultural Motifs</h3>
+                        <p>Every design tells a story, preserving cultural narratives and regional artistic traditions through commerce.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title">Join Our Mission</h2>
+                <p class="section-subtitle">Be part of preserving India's cultural heritage while supporting artisan communities</p>
+                <div class="cta-actions">
+                    <a href="shop.html" class="btn btn-primary">
+                        <span>Shop Authentic Crafts</span>
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <a href="join-community.html" class="btn btn-outline">
+                        <span>Join Our Community</span>
+                        <i class="fas fa-users"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">ArtisanCraft India</span>
+                    </div>
+                    <p class="footer-description">Bringing India's finest handicrafts to the world. Supporting artisan communities while preserving cultural heritage.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="artisans.html">Artisans</a></li>
+                        <li><a href="join-community.html">Join the Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@artisancraft.in</span>
+                        </div>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <span>Authentic Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ArtisanCraft India. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

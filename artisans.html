@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Artisans - ArtisanCraft India | Meet the Masters</title>
+    <meta name="description" content="Meet the skilled artisans behind our beautiful handicrafts. Discover their stories, traditions, and masterful craftsmanship.">
+    <meta name="keywords" content="artisans, craftsmen, indian artists, traditional crafts, handicraft makers, skilled workers">
+    <meta name="author" content="ArtisanCraft India">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Premium Crafts...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                ArtisanCraft <span class="logo-accent">India</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="artisans.html" class="nav-link active">Artisans</a></li>
+                    <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="artisans.html" class="nav-link active">Artisans</a></li>
+                <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Meet Our Master Artisans</h1>
+                <p class="page-subtitle">The skilled hands and passionate hearts behind every masterpiece</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Artisans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisan Impact Section -->
+    <section class="artisan-impact">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-text">
+                    <h2 class="section-title">Empowering Traditional Craftsmen</h2>
+                    <p class="section-subtitle">Every purchase directly supports artisan families and helps preserve India's rich cultural heritage for future generations.</p>
+                    <div class="impact-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Active Artisans</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Villages Supported</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Traditional Crafts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-image">
+                    <img src="images/artisans.jpg" alt="Artisans at work" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisans Grid -->
+    <section class="artisans-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Featured Artisans</h2>
+                <p class="section-subtitle">Meet the master craftsmen who bring centuries-old traditions to life</p>
+            </div>
+
+            <div class="artisans-grid">
+                <!-- Artisan 1 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/rajeshKumar.png" alt="Rajesh Kumar - Potter" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-vase"></i>
+                                <span>Pottery</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Rajesh Kumar</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Khurja, Uttar Pradesh
+                        </p>
+                        <p class="artisan-specialty">Blue Pottery Specialist</p>
+                        <p class="artisan-description">Third-generation potter known for his intricate blue pottery designs. His work combines traditional Jaipur techniques with contemporary aesthetics.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">15+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">200+</span>
+                                <span class="label">Products Created</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan 2 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/meeraDevi.png" alt="Meera Devi - Weaver" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Textiles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Meera Devi</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Varanasi, Uttar Pradesh
+                        </p>
+                        <p class="artisan-specialty">Banarasi Silk Weaver</p>
+                        <p class="artisan-description">Master weaver specializing in traditional Banarasi silk sarees. Her intricate gold thread work has been passed down through four generations.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">25+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">150+</span>
+                                <span class="label">Sarees Woven</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan 3 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/sureshSharma.png" alt="Suresh Sharma - Metal Craftsman" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-hammer"></i>
+                                <span>Metalwork</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Suresh Sharma</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Moradabad, Uttar Pradesh
+                        </p>
+                        <p class="artisan-specialty">Brass & Bronze Craftsman</p>
+                        <p class="artisan-description">Expert in traditional brass and bronze work. Creates stunning decorative pieces and functional items using age-old techniques.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">20+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">300+</span>
+                                <span class="label">Pieces Crafted</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan 4 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/lakshmiPatel.png" alt="Lakshmi Patel - Jewelry Maker" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-gem"></i>
+                                <span>Jewelry</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Lakshmi Patel</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Jaipur, Rajasthan
+                        </p>
+                        <p class="artisan-specialty">Silver Jewelry Designer</p>
+                        <p class="artisan-description">Renowned for her exquisite silver jewelry designs that blend traditional Rajasthani motifs with contemporary styling.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">18+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">500+</span>
+                                <span class="label">Jewelry Pieces</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan 5 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/raviMishra.png" alt="Ravi Mishra - Wood Carver" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-tree"></i>
+                                <span>Woodcraft</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Ravi Mishra</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Channapatna, Karnataka
+                        </p>
+                        <p class="artisan-specialty">Wooden Toy Maker</p>
+                        <p class="artisan-description">Master craftsman specializing in traditional Channapatna wooden toys and decorative items using natural dyes and lacquer.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">22+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">1000+</span>
+                                <span class="label">Toys Created</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan 6 -->
+                <div class="artisan-card">
+                    <div class="artisan-image">
+                        <img src="images/sunitaDas.png" alt="Sunita Das - Painter" loading="lazy">
+                        <div class="artisan-overlay">
+                            <div class="craft-badge">
+                                <i class="fas fa-palette"></i>
+                                <span>Painting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artisan-info">
+                        <h3 class="artisan-name">Sunita Das</h3>
+                        <p class="artisan-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mithila, Bihar
+                        </p>
+                        <p class="artisan-specialty">Madhubani Artist</p>
+                        <p class="artisan-description">Celebrated Madhubani painter whose vibrant works depict mythological themes and nature using traditional natural pigments.</p>
+                        <div class="artisan-stats">
+                            <div class="stat">
+                                <span class="number">12+</span>
+                                <span class="label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">80+</span>
+                                <span class="label">Paintings Created</span>
+                            </div>
+                        </div>
+                        <div class="artisan-actions">
+                            <button class="btn btn-primary">View Work</button>
+                            <button class="btn btn-outline">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Support Section -->
+    <section class="support-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How We Support Our Artisans</h2>
+                <p class="section-subtitle">Building sustainable livelihoods and preserving traditional crafts</p>
+            </div>
+            
+            <div class="support-grid">
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Fair Trade Practices</h3>
+                    <p>We ensure fair compensation for all artisans, providing them with sustainable income and respect for their craft.</p>
+                </div>
+                
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Skill Development</h3>
+                    <p>Regular workshops and training programs help artisans refine their skills and learn new techniques.</p>
+                </div>
+                
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Market Access</h3>
+                    <p>We connect local artisans with international markets, expanding their reach and opportunities.</p>
+                </div>
+                
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Healthcare, education, and infrastructure support for artisan families and their communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section class="join-section">
+        <div class="container">
+            <div class="join-content">
+                <h2 class="section-title">Become Part of Our Artisan Family</h2>
+                <p class="section-subtitle">Are you a skilled craftsperson? Join our platform and share your beautiful creations with the world.</p>
+                <div class="join-actions">
+                    <button class="btn btn-primary">Apply as Artisan</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">ArtisanCraft India</span>
+                    </div>
+                    <p class="footer-description">Bringing India's finest handicrafts to the world. Supporting artisan communities while preserving cultural heritage.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="artisans.html">Artisans</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@artisancraft.in</span>
+                        </div>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <span>Authentic Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ArtisanCraft India. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

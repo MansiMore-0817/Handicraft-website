@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ArtisanCraft India | Premium Handcrafted Treasures</title>
+    <meta name="description" content="Shop authentic Indian handicrafts. Premium pottery, textiles, jewelry, and wooden crafts made by skilled artisans.">
+    <meta name="keywords" content="handicrafts, indian crafts, handmade, artisan, pottery, textiles, jewelry, traditional art, cultural heritage">
+    <meta name="author" content="ArtisanCraft India">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Shop - ArtisanCraft India | Premium Handcrafted Treasures">
+    <meta property="og:description" content="Shop authentic Indian handicrafts. Premium pottery, textiles, jewelry, and wooden crafts made by skilled artisans.">
+    <meta property="og:image" content="images/handicrafts.jpg">
+    <meta property="og:url" content="https://artisancraft-india.com/shop">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shop - ArtisanCraft India | Premium Handcrafted Treasures">
+    <meta name="twitter:description" content="Shop authentic Indian handicrafts. Premium pottery, textiles, jewelry, and wooden crafts.">
+    <meta name="twitter:image" content="images/handicrafts.jpg">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Premium Crafts...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                ArtisanCraft <span class="logo-accent">India</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                    <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Shop Authentic Handicrafts</h1>
+                <p class="page-subtitle">Discover India's finest handcrafted treasures made by skilled artisans</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Shop</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Sidebar Filters -->
+                <aside class="shop-sidebar">
+                    <div class="filter-section">
+                        <h3 class="filter-title">Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="all" checked>
+                                <span class="checkmark"></span>
+                                All Products
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="pottery">
+                                <span class="checkmark"></span>
+                                Pottery & Ceramics
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="textiles">
+                                <span class="checkmark"></span>
+                                Handloom Textiles
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="jewelry">
+                                <span class="checkmark"></span>
+                                Traditional Jewelry
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="woodcraft">
+                                <span class="checkmark"></span>
+                                Wooden Crafts
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="paintings">
+                                <span class="checkmark"></span>
+                                Paintings & Art
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">Price Range</h3>
+                        <div class="price-filter">
+                            <input type="range" id="priceRange" min="0" max="500" value="500" class="price-slider">
+                            <div class="price-display">
+                                <span>$0</span>
+                                <span id="maxPrice">$500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3 class="filter-title">Artisan Location</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="rajasthan">
+                                <span class="checkmark"></span>
+                                Rajasthan
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="gujarat">
+                                <span class="checkmark"></span>
+                                Gujarat
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="westbengal">
+                                <span class="checkmark"></span>
+                                West Bengal
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="location" value="odisha">
+                                <span class="checkmark"></span>
+                                Odisha
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Shop Content -->
+                <main class="shop-main">
+                    <!-- Shop Header -->
+                    <div class="shop-header">
+                        <div class="results-info">
+                            <span class="results-count">Showing 1-12 of 48 products</span>
+                        </div>
+                        <div class="shop-controls">
+                            <select class="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="popular">Most Popular</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Grid -->
+                    <div class="product-grid" id="productGrid">
+                        <!-- Product 1 -->
+                        <div class="product-card" data-category="pottery">
+                            <div class="product-image">
+                                <img src="images/blue-vase.jpg" alt="Blue Pottery Vase" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" data-product="blue-vase">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-featured">Featured</span>
+                                    <span class="badge badge-handmade">Handmade</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Blue Pottery Vase</h3>
+                                <p class="product-origin">Handcrafted in Jaipur, Rajasthan</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(24)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$89.99</span>
+                                    <span class="original-price">$120.00</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card" data-category="textiles">
+                            <div class="product-image">
+                                <img src="images/banarasi-saree.jpg" alt="Banarasi Silk Saree" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" data-product="banarasi-saree">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-premium">Premium</span>
+                                    <span class="badge badge-authentic">Authentic</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Banarasi Silk Saree</h3>
+                                <p class="product-origin">Woven in Varanasi, Uttar Pradesh</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(18)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$299.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card" data-category="woodcraft">
+                            <div class="product-image">
+                                <img src="images/brass-decor.jpg" alt="Wooden Elephant Sculpture" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" data-product="wooden-elephant">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-bestseller">Bestseller</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Wooden Elephant Sculpture</h3>
+                                <p class="product-origin">Carved in Channapatna, Karnataka</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(31)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$149.99</span>
+                                    <span class="original-price">$180.00</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Additional Products (Dummy) -->
+                        <div class="product-card" data-category="jewelry">
+                            <div class="product-image">
+                                <img src="images/silverEarrings.png" alt="Silver Jhumka Earrings" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-handmade">Handmade</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Silver Jhumka Earrings</h3>
+                                <p class="product-origin">Crafted in Jaipur, Rajasthan</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(15)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$45.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="paintings">
+                            <div class="product-image">
+                                <img src="images/madhubani.png" alt="Madhubani Painting" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-authentic">Authentic</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Madhubani Painting</h3>
+                                <p class="product-origin">Painted in Mithila, Bihar</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(12)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$199.99</span>
+                                    <span class="original-price">$250.00</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="pottery">
+                            <div class="product-image">
+                                <img src="images/terracottaPlanterSet.png" alt="Terracotta Planter Set" loading="lazy">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="wishlist-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="product-badges">
+                                    <span class="badge badge-eco">Eco-Friendly</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Terracotta Planter Set</h3>
+                                <p class="product-origin">Made in Khurja, Uttar Pradesh</p>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-count">(28)</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="current-price">$65.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span>Add to Cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-section">
+                        <div class="pagination">
+                            <button class="page-btn prev" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Previous
+                            </button>
+                            <div class="page-numbers">
+                                <button class="page-number active">1</button>
+                                <button class="page-number">2</button>
+                                <button class="page-number">3</button>
+                                <span class="page-dots">...</span>
+                                <button class="page-number">8</button>
+                            </div>
+                            <button class="page-btn next">
+                                Next
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">ArtisanCraft India</span>
+                    </div>
+                    <p class="footer-description">Bringing India's finest handicrafts to the world. Supporting artisan communities while preserving cultural heritage.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="artisans.html">Artisans</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@artisancraft.in</span>
+                        </div>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <span>Authentic Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ArtisanCraft India. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

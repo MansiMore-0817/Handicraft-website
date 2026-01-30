@@ -1,0 +1,220 @@
+/* ===== NAVBAR RESPONSIVE BEHAVIOR ===== */
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+    .nav-desktop {
+        display: block;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: none !important;
+    }
+    
+    .header-container {
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .nav-desktop ul {
+        gap: var(--spacing-xl);
+    }
+}
+
+/* ===== TABLET (768px to 1023px) ===== */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .nav-desktop {
+        display: block;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: none !important;
+    }
+    
+    .nav-desktop ul {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .header-actions {
+        gap: var(--spacing-xs);
+    }
+    
+    .search-btn,
+    .wishlist-btn,
+    .cart-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== MOBILE (767px and below) ===== */
+@media (max-width: 767px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-mobile.show {
+        display: block;
+    }
+    
+    .header-container {
+        padding: var(--spacing-sm);
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .header-actions {
+        gap: var(--spacing-xs);
+    }
+    
+    .search-btn,
+    .wishlist-btn,
+    .cart-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    .nav-mobile {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .nav-mobile .nav-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        margin: var(--spacing-xs) 0;
+        border-radius: var(--radius-md);
+    }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+    .header-container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.4rem;
+    }
+    
+    .search-btn,
+    .wishlist-btn,
+    .cart-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .badge {
+        font-size: 0.6rem;
+        min-width: 16px;
+        padding: 1px 4px;
+    }
+    
+    .nav-mobile .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .header {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .header-container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .nav-mobile {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .nav-link::after {
+        height: 1px;
+        transform: scaleY(2);
+    }
+}
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link:hover::after {
+        width: 0;
+    }
+    
+    .nav-link:active::after {
+        width: 100%;
+    }
+    
+    .search-btn:hover::before,
+    .wishlist-btn:hover::before,
+    .cart-btn:hover::before {
+        display: none;
+    }
+    
+    .search-btn,
+    .wishlist-btn,
+    .cart-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .nav-mobile.show {
+        animation: none;
+    }
+    
+    .nav-mobile.hide {
+        animation: none;
+    }
+    
+    .header.sticky {
+        animation: none;
+    }
+    
+    .nav-link::after {
+        transition: none;
+    }
+    
+    .mobile-menu-toggle span {
+        transition: none;
+    }
+}

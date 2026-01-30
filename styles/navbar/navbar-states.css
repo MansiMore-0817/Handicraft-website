@@ -1,0 +1,155 @@
+/* ===== NAVBAR STATES & INTERACTIONS ===== */
+
+/* ===== SCROLL STATE ===== */
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow-md);
+}
+
+.header.scrolled .logo {
+    transform: scale(0.95);
+}
+
+/* ===== ACTIVE STATES ===== */
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background: var(--primary-color);
+}
+
+/* ===== HOVER STATES ===== */
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.logo:hover .logo-accent {
+    color: var(--primary-dark);
+    transition: color var(--transition-normal);
+}
+
+/* ===== FOCUS STATES ===== */
+.nav-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.logo:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* ===== LOADING STATES ===== */
+.header.loading {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.header.loading .nav-link {
+    color: var(--gray-dark);
+}
+
+/* ===== ERROR STATES ===== */
+.header.error .nav-link {
+    color: #dc3545;
+}
+
+/* ===== DISABLED STATES ===== */
+.nav-link.disabled {
+    color: var(--gray-dark);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.nav-link.disabled::after {
+    display: none;
+}
+
+/* ===== MOBILE MENU STATES ===== */
+.nav-mobile.show {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+.nav-mobile.hide {
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== STICKY STATES ===== */
+.header.sticky {
+    position: fixed;
+    top: 0;
+    animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ===== THEME STATES ===== */
+.dark-theme .header {
+    background: rgba(44, 62, 80, 0.95);
+    border-bottom-color: var(--gray-medium);
+}
+
+.dark-theme .nav-link {
+    color: var(--white);
+}
+
+.dark-theme .nav-link:hover,
+.dark-theme .nav-link.active {
+    color: var(--primary-color);
+}
+
+.dark-theme .logo {
+    color: var(--white);
+}
+
+.dark-theme .search-btn,
+.dark-theme .wishlist-btn,
+.dark-theme .cart-btn {
+    color: var(--white);
+}
+
+.dark-theme .search-btn:hover,
+.dark-theme .wishlist-btn:hover,
+.dark-theme .cart-btn:hover {
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+}

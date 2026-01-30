@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Community - ArtisanCraft India | Empower Your Craft Journey</title>
+    <meta name="description" content="Join ArtisanCraft India community. Sell your handicrafts, learn new skills, build teams, or find opportunities. Empowering women and preserving traditions.">
+    <meta name="keywords" content="join community, sell handicrafts, learn crafts, artisan opportunities, women empowerment, home-based work">
+    <meta name="author" content="ArtisanCraft India">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading Premium Crafts...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                ArtisanCraft <span class="logo-accent">India</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                    <li><a href="join-community.html" class="nav-link active">Join the Community</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">0</span>
+                </button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="artisans.html" class="nav-link">Artisans</a></li>
+                <li><a href="join-community.html" class="nav-link active">Join the Community</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Join the Community</h1>
+                <p class="page-subtitle">Transform your skills into sustainable income while preserving India's rich craft traditions</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Join the Community</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Options -->
+    <section class="community-options">
+        <div class="container">
+            <div class="options-grid">
+                <!-- I Have a Handicraft Product to Sell -->
+                <div class="option-card sell-products">
+                    <div class="option-header">
+                        <div class="option-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h2>I Have a Handicraft Product to Sell</h2>
+                        <p class="option-subtitle">For home-based creators, small artisans, and beginners</p>
+                    </div>
+                    
+                    <div class="option-content">
+                        <p class="option-description">
+                            You don't need a shop, a website, or a big investment.
+                        </p>
+                        
+                        <div class="target-audience">
+                            <h4>This section is for people who:</h4>
+                            <ul>
+                                <li>Make handicrafts at home</li>
+                                <li>Have unique handmade products</li>
+                                <li>Want to sell but don't know where to start</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4>We help you:</h4>
+                            <ul>
+                                <li>Showcase their products</li>
+                                <li>Reach the right audience</li>
+                                <li>Grow at their own pace</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn btn-primary cta-btn">
+                            <span>Submit Your Craft</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- I Want to Learn or Join a Team -->
+                <div class="option-card learn-join">
+                    <div class="option-header">
+                        <div class="option-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h2>I Want to Learn or Join a Team</h2>
+                        <p class="option-subtitle">For beginners, women seeking home-based work, or anyone willing to learn</p>
+                    </div>
+                    
+                    <div class="option-content">
+                        <p class="option-description">
+                            No prior experience is required.
+                        </p>
+                        
+                        <div class="target-audience">
+                            <h4>This section is for people who:</h4>
+                            <ul>
+                                <li>Want to earn from home</li>
+                                <li>Want to learn stitching, painting, weaving, beading, or finishing work</li>
+                                <li>Want flexible, skill-based income</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4>You can:</h4>
+                            <ul>
+                                <li>Join an artisan's team</li>
+                                <li>Learn while earning</li>
+                                <li>Work safely from their home</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn btn-primary cta-btn">
+                            <span>Find Opportunities</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- I Want to Build a Team -->
+                <div class="option-card build-team">
+                    <div class="option-header">
+                        <div class="option-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h2>I Want to Build a Team</h2>
+                        <p class="option-subtitle">For senior artisans, craft leaders, and small workshop owners</p>
+                    </div>
+                    
+                    <div class="option-content">
+                        <p class="option-description">
+                            This section is for people who already practice a craft and want to grow.
+                        </p>
+                        
+                        <div class="benefits">
+                            <h4>You can:</h4>
+                            <ul>
+                                <li>Find people willing to learn</li>
+                                <li>Delegate work</li>
+                                <li>Expand production</li>
+                                <li>Create employment in their community</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="impact-note">
+                            <p><strong>This helps transform one artisan into many livelihoods.</strong></p>
+                        </div>
+                        
+                        <button class="btn btn-primary cta-btn">
+                            <span>Post an Opportunity</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empowering Women Section -->
+    <section class="empowering-women">
+        <div class="container">
+            <div class="empowerment-content">
+                <div class="empowerment-text">
+                    <h2 class="section-title">Empowering Women, One Home at a Time</h2>
+                    
+                    <div class="empowerment-description">
+                        <p>This platform supports women who:</p>
+                        <ul>
+                            <li>Want to work from home</li>
+                            <li>Want financial independence</li>
+                            <li>Want to turn skills into income</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="empowerment-benefits">
+                        <h4>This helps:</h4>
+                        <ul>
+                            <li>Reduce unemployment</li>
+                            <li>Support rural and semi-urban families</li>
+                            <li>Preserve traditional skills across generations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="empowerment-image">
+                    <img src="images/meeraDevi.png" alt="Women artisans working from home" loading="lazy">
+                    <div class="empowerment-stats">
+                        <div class="stat">
+                            <span class="number">85%</span>
+                            <span class="label">Women Artisans</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">1000+</span>
+                            <span class="label">Families Supported</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple steps to start your craft journey</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose how you want to participate</h3>
+                        <p>Select from selling products, learning skills, or building a team based on your goals and current situation.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Share your interest or skills</h3>
+                        <p>Tell us about your craft interests, existing skills, or what you'd like to learn. We'll match you accordingly.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get connected with the right people</h3>
+                        <p>We'll connect you with mentors, team members, or customers based on your chosen path and location.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start building, learning, or earning</h3>
+                        <p>Begin your craft journey with support from our community. Grow at your own pace with ongoing guidance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="frontend-note">
+                <p><em>Note: Frontend-only flow for now</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact -->
+    <section class="our-impact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Creating ripple effects across communities</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>One artisan can support 5–10 home-based workers</h3>
+                    <p>Master artisans create employment opportunities for multiple families in their communities.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>One village can sustain multiple craft teams</h3>
+                    <p>Villages become self-sufficient craft hubs with diverse skill sets and production capabilities.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Traditional skills stay alive</h3>
+                    <p>Ancient crafting techniques are preserved and passed down to new generations of artisans.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Employment grows without migration</h3>
+                    <p>People can earn sustainable income in their home villages without leaving their families behind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Begin -->
+    <section class="ready-to-begin">
+        <div class="container">
+            <div class="begin-content">
+                <h2 class="section-title">Ready to Begin?</h2>
+                <p class="begin-message">You don't need to know everything. You just need to begin.</p>
+                
+                <div class="begin-actions">
+                    <button class="btn btn-primary">
+                        <span>Join the Community</span>
+                        <i class="fas fa-users"></i>
+                    </button>
+                    <a href="contact.html" class="btn btn-outline">
+                        <span>Contact Us</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎨</span>
+                        <span class="logo-text">ArtisanCraft India</span>
+                    </div>
+                    <p class="footer-description">Bringing India's finest handicrafts to the world. Supporting artisan communities while preserving cultural heritage.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="artisans.html">Artisans</a></li>
+                        <li><a href="join-community.html">Join the Community</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@artisancraft.in</span>
+                        </div>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-award"></i>
+                            <span>Authentic Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 ArtisanCraft India. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

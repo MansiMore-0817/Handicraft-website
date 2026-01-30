@@ -1,0 +1,78 @@
+/* ===== NAVIGATION LINKS ===== */
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    transition: color var(--transition-normal);
+    display: block;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===== DESKTOP NAVIGATION SPECIFIC ===== */
+.nav-desktop .nav-link {
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* ===== MOBILE NAVIGATION SPECIFIC ===== */
+.nav-mobile .nav-link {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 1.1rem;
+}
+
+.nav-mobile .nav-link:last-child {
+    border-bottom: none;
+}
+
+.nav-mobile .nav-link::after {
+    display: none;
+}
+
+.nav-mobile .nav-link:hover,
+.nav-mobile .nav-link.active {
+    background: var(--gray-light);
+    padding-left: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+/* ===== NAVIGATION LINK FOCUS STATES ===== */
+.nav-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* ===== NAVIGATION ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    .nav-link::after {
+        transition: none;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+}
