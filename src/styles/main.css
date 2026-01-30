@@ -81,4 +81,4 @@ h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
 p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: var(--text-light);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);}

@@ -73,25 +73,48 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Mobile Hamburger Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav class="nav-mobile">
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="shop.html" class="nav-link active">Shop</a></li>
-                <li><a href="artisans.html" class="nav-link">Artisans</a></li>
-                <li><a href="join-community.html" class="nav-link">Join the Community</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="shop.html" class="mobile-nav-link">Shop</a></li>
+                    <li><a href="artisans.html" class="mobile-nav-link">Artisans</a></li>
+                    <li><a href="join-community.html" class="mobile-nav-link">Join the Community</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="mobile-actions">
+                    <button class="mobile-action-btn search-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                    <button class="mobile-action-btn wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="badge">0</span>
+                    </button>
+                    <button class="mobile-action-btn cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="badge">0</span>
+                    </button>
+                    <button class="mobile-action-btn theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="theme-icon-mobile"></i>
+                        <span>Theme</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Page Header -->

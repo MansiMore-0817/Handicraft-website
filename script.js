@@ -19,13 +19,96 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== MOBILE MENU TOGGLE =====
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMobile = document.querySelector('.nav-mobile');
+// ===== MOBILE HAMBURGER MENU TOGGLE =====
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileActionBtns = document.querySelectorAll('.mobile-action-btn');
 
-mobileMenuToggle.addEventListener('click', () => {
-    navMobile.classList.toggle('show');
-    mobileMenuToggle.classList.toggle('active');
+    function closeMobileMenu() {
+        if (hamburgerBtn && mobileMenu) {
+            hamburgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('show');
+            mobileMenu.style.display = 'none';
+            mobileMenu.style.visibility = 'hidden';
+            mobileMenu.style.opacity = '0';
+            mobileMenu.style.pointerEvents = 'none';
+            mobileMenu.style.zIndex = '-1';
+        }
+    }
+
+    function openMobileMenu() {
+        if (hamburgerBtn && mobileMenu) {
+            hamburgerBtn.classList.add('active');
+            mobileMenu.classList.add('show');
+            mobileMenu.style.display = 'block';
+            mobileMenu.style.visibility = 'visible';
+            mobileMenu.style.opacity = '1';
+            mobileMenu.style.pointerEvents = 'auto';
+            mobileMenu.style.zIndex = '999';
+        }
+    }
+
+    // FORCE CLOSE ON PAGE LOAD
+    closeMobileMenu();
+
+    if (hamburgerBtn && mobileMenu) {
+        // Toggle mobile menu
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (mobileMenu.classList.contains('show')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        // FORCE CLOSE on nav link clicks
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                closeMobileMenu();
+                // Allow navigation to proceed
+            });
+        });
+
+        // FORCE CLOSE on action button clicks
+        mobileActionBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                closeMobileMenu();
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+    }
+
+    // FORCE CLOSE before page navigation
+    window.addEventListener('beforeunload', function() {
+        closeMobileMenu();
+    });
+
+    // FORCE CLOSE on page show (back/forward navigation)
+    window.addEventListener('pageshow', function() {
+        closeMobileMenu();
+    });
+
+    // FORCE CLOSE on focus/visibility change
+    window.addEventListener('focus', function() {
+        closeMobileMenu();
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            closeMobileMenu();
+        }
+    });
 });
 
 // ===== SMOOTH SCROLLING FOR NAVIGATION LINKS =====
@@ -637,51 +720,12 @@ function updatePrices() {
     });
 }
 
-// ===== THEME TOGGLE =====
-function createThemeToggle() {
-    const headerActions = document.querySelector('.header-actions');
-    const themeToggle = document.createElement('button');
-    themeToggle.className = 'theme-toggle';
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    themeToggle.setAttribute('aria-label', 'Toggle Dark Mode');
-    
-    themeToggle.style.cssText = `
-        background: none;
-        border: none;
-        font-size: 1.2rem;
-        color: var(--text-dark);
-        cursor: pointer;
-        padding: 8px;
-        border-radius: 4px;
-        transition: all 0.3s ease;
-    `;
-    
-    themeToggle.addEventListener('click', toggleTheme);
-    headerActions.insertBefore(themeToggle, headerActions.firstChild);
-}
-
-function toggleTheme() {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    const themeToggle = document.querySelector('.theme-toggle i');
-    
-    themeToggle.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    localStorage.setItem('darkTheme', isDark);
-}
-
 // ===== INITIALIZE ADVANCED FEATURES =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize advanced features
     createPriceRangeFilter();
     addImageZoom();
     createCurrencySelector();
-    createThemeToggle();
-    
-    // Load saved theme preference
-    if (localStorage.getItem('darkTheme') === 'true') {
-        document.body.classList.add('dark-theme');
-        document.querySelector('.theme-toggle i').className = 'fas fa-sun';
-    }
     
     // Add to recently viewed when quick view is opened
     quickViewButtons.forEach(button => {
@@ -1021,53 +1065,38 @@ console.log('Enhanced website functionality loaded! 🚀');
 
 // ===== DARK MODE FUNCTIONALITY =====
 function initializeTheme() {
-    // Get saved theme from localStorage or default to light
     const savedTheme = localStorage.getItem('theme') || 'light';
     const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
     
-    // Apply the theme
     document.documentElement.setAttribute('data-theme', savedTheme);
     
-    // Update icon based on current theme
-    if (themeIcon) {
-        if (savedTheme === 'dark') {
-            themeIcon.className = 'fas fa-sun';
-        } else {
-            themeIcon.className = 'fas fa-moon';
-        }
-    }
+    const iconClass = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    
+    if (themeIcon) themeIcon.className = iconClass;
+    if (themeIconMobile) themeIconMobile.className = iconClass;
 }
 
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     const themeIcon = document.getElementById('theme-icon');
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
     
-    // Apply new theme
     document.documentElement.setAttribute('data-theme', newTheme);
-    
-    // Save to localStorage
     localStorage.setItem('theme', newTheme);
     
-    // Update icon with smooth transition
-    if (themeIcon) {
-        themeIcon.style.transform = 'scale(0.8)';
-        
-        setTimeout(() => {
-            if (newTheme === 'dark') {
-                themeIcon.className = 'fas fa-sun';
-            } else {
-                themeIcon.className = 'fas fa-moon';
-            }
-            themeIcon.style.transform = 'scale(1)';
-        }, 150);
-    }
+    const iconClass = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     
-    // Add subtle animation to body
-    document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-    setTimeout(() => {
-        document.body.style.transition = '';
-    }, 300);
+    [themeIcon, themeIconMobile].forEach(icon => {
+        if (icon) {
+            icon.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                icon.className = iconClass;
+                icon.style.transform = 'scale(1)';
+            }, 150);
+        }
+    });
 }
 
 // Initialize theme on page load

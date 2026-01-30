@@ -3,16 +3,21 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section-header {
     text-align: center;
     margin-bottom: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
 }
 
 .section-title {
     margin-bottom: var(--spacing-sm);
     position: relative;
+    width: 100%;
 }
 
 .section-title::after {
@@ -32,6 +37,7 @@
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* ===== PAGE HEADER STYLES ===== */
@@ -40,11 +46,15 @@
     padding: var(--spacing-xxl) 0 var(--spacing-xl);
     margin-top: 80px;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .page-header-content {
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 var(--spacing-md);
 }
 
 .page-title {
@@ -67,6 +77,7 @@
     gap: var(--spacing-xs);
     font-size: 0.9rem;
     color: var(--text-light);
+    flex-wrap: wrap;
 }
 
 .breadcrumb a {
@@ -93,24 +104,32 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xxl);
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .three-column-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
 }
 
 .four-column-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-lg);
+    width: 100%;
+    max-width: 100%;
 }
 
 .auto-fit-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
 }
 
 /* ===== SPACING UTILITIES ===== */

@@ -81,6 +81,16 @@ html {
     font-size: 16px;
 }
 
+/* Prevent horizontal scrolling globally */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-secondary);
     line-height: 1.6;
